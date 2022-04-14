@@ -1,3 +1,2 @@
-## Projekt sprawdzający ważność karty kredytowej
-
-Kod opiera się na algorytmie Luhna.
+# Check if your credit card number is valid
+## prosty projekt sprawdzający walidację wpisanego numeru karty kredytowej oparty na algorytmie Luhna
