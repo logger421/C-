@@ -32,5 +32,9 @@ int main() {
 }
 
 
-// bool is_number(const std::string toCheck) {
-// }
+bool is_number(const std::string toCheck) {
+    for(char const &c : toCheck)
+        if(!std::isdigit(c))
+            return false;
+    return true;
+}
