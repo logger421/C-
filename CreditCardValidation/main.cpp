@@ -5,7 +5,7 @@ const std::string EXIT = "quit";
 /* 
 * function to check if given input string is a number 
 */
-bool is_number(const std::string toCheck);
+bool is_number(const std::string& toCheck);
 
 int main() {
     std::cout << "Welcome to check if my credit card number is valid program!\n";
@@ -32,7 +32,7 @@ int main() {
 }
 
 
-bool is_number(const std::string toCheck) {
+bool is_number(const std::string& toCheck) {
     for(char const &c : toCheck)
         if(!std::isdigit(c))
             return false;
