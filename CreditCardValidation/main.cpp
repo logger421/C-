@@ -2,6 +2,9 @@
 
 const std::string EXIT = "quit";
 
+/* 
+* function to check if given input string is a number 
+*/
 bool is_number(const std::string toCheck);
 
 int main() {
@@ -28,6 +31,6 @@ int main() {
     std::cout << "See you next time!\n";
 }
 
-bool is_number(const std::string toCheck) {
-    return false;
-}
+
+// bool is_number(const std::string toCheck) {
+// }
