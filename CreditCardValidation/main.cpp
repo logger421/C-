@@ -6,7 +6,15 @@ const std::string EXIT = "quit";
 * function to check if given input string is a number 
 */
 bool is_number(const std::string& toCheck);
+/*
+* function to check if credit card number is valid based on
+* Luhn algorithm
+*/
 bool check_if_valid(const std::string& ccNumber);
+
+
+// 3379513561108795 - valid
+// 3479513561108795 - invalid
 
 int main() {
     std::cout << "Welcome to check if my credit card number is valid program!\n";
@@ -23,7 +31,7 @@ int main() {
 
         if( !is_number(credit_card_number) ) {
             std::cout << "Given number is not a credit card number\n";
-            std::cout << "please enter a number: ";
+            std::cout << "please enter a number:\n: ";
             std::cin >> credit_card_number;
             continue;
         }
@@ -33,7 +41,7 @@ int main() {
             "Your credit card number isn't valid\n";
             std::getchar();
             std::getchar();
-            std::cout << "Please enter your credit card number:\n(or type \"quit\" to exit)\n ";
+            std::cout << "Please enter your credit card number:\n(or type \"quit\" to exit)\n: ";
             std::cin >> credit_card_number;
             continue;
         }
@@ -69,5 +77,3 @@ bool check_if_valid(const std::string& ccNumber) {
     }
     return (evenSum + oddSum) % 10 == 0;
 }
-
-// 3379513561108795
