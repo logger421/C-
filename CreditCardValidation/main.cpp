@@ -50,5 +50,24 @@ bool is_number(const std::string& toCheck) {
 }
 
 bool check_if_valid(const std::string& ccNumber) {
-    return true;
+    int len = ccNumber.length();
+    int evenSum = 0;
+    int oddSum = 0;
+    int digit = 0;
+
+    // multiply even positions by 2
+    for( int i = 0; i < len; i++ ) {
+        digit = (ccNumber[i] - 48);
+        if( i % 2 == 0) {
+            digit*=2;
+            if( digit > 9 ) 
+            digit = digit/10 + digit%10;
+            evenSum += digit;
+        } else {
+            oddSum+=digit;
+        }
+    }
+    return (evenSum + oddSum) % 10 == 0;
 }
+
+// 3379513561108795
